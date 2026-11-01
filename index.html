@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deepak Kumar – BCA Student & Aspiring Web Developer</title>
+<meta name="description" content="Deepak Kumar is a BCA student from Ludhiana interested in web development, programming and cyber security.">
+<meta name="theme-color" content="#0a0c14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c14;--ink:#eef0f6;--mute:#9aa1b5;--card:#12152299;--line:#ffffff1f;--main:#5ee0c0;--acc:#ffb347}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif;background-image:radial-gradient(ellipse 60% 40% at 15% 0,#1f7a6844,transparent),radial-gradient(ellipse 50% 40% at 90% 40%,#ffb34720,transparent),radial-gradient(ellipse 60% 40% at 10% 90%,#5ee0c01c,transparent);background-attachment:fixed;overflow-x:hidden}
+h1,h2,h3{font-family:Syne,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:88px 0}
+h2{font-size:clamp(32px,5vw,48px);margin-bottom:12px}
+.lead{color:var(--mute);max-width:58ch;margin:0 0 36px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:#111;padding:8px 14px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--main),var(--acc));z-index:90}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:#0a0c14b3;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.brand{font-family:Syne;font-weight:800;font-size:21px;text-decoration:none}
+.brand span{color:var(--acc)}
+nav a{margin-left:20px;text-decoration:none;color:var(--mute);font-size:15px}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font:600 16px Inter;text-decoration:none;border:2px solid var(--main);background:var(--main);color:#0a0c14;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px #5ee0c044}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--acc);box-shadow:none}
+.hero{min-height:calc(100vh - 62px);display:flex;align-items:center;padding:56px 0}
+.kicker{color:var(--acc);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:14px}
+.name{font-family:Syne;font-weight:800;font-size:clamp(48px,11vw,120px);line-height:1;margin:10px 0 18px;display:flex;flex-wrap:wrap}
+.name span{display:inline-block;transition:transform .25s ease-out,color .25s,text-shadow .25s}
+.name .sp{width:.3em}
+.hero h1{font-size:clamp(22px,3.4vw,34px);max-width:26ch;font-weight:700}
+.hero p{color:var(--mute);max-width:54ch;margin:16px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.fact{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--card)}
+.fact b{display:block;font:700 20px Syne;color:var(--acc)}
+.fact span{color:var(--mute);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{padding:10px 22px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-weight:500;transition:transform .2s,border-color .2s,color .2s}
+.chip:hover{transform:translateY(-4px) scale(1.04);border-color:var(--acc);color:var(--acc)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;perspective:1000px}
+.card{border:1px solid var(--line);border-radius:18px;background:#121522;padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .15s ease-out,border-color .3s;transform-style:preserve-3d}
+.card:hover{border-color:var(--main)}
+.card h3{font-size:24px}
+.card p{margin:0;font-size:15px;color:#c9cde0}
+.card ul{margin:0;padding-left:18px;color:var(--mute);font-size:15px}
+.badge{align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.badge.now{background:var(--main);color:#0a0c14}
+.badge.plan{border:1px dashed var(--acc);color:var(--acc)}
+.card.plan{border-style:dashed}
+.sub{font:700 22px Syne;margin:48px 0 18px;color:var(--mute)}
+.contact{display:flex;flex-wrap:wrap;gap:14px}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mute);font-size:14px}
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+#dot,#ring{position:fixed;top:0;left:0;pointer-events:none;z-index:200;border-radius:50%;display:none}
+#dot{width:7px;height:7px;background:var(--acc);margin:-3.5px 0 0 -3.5px}
+#ring{width:36px;height:36px;border:1.5px solid var(--acc);margin:-18px 0 0 -18px;transition:width .2s,height .2s,margin .2s,background .2s}
+#ring.big{width:62px;height:62px;margin:-31px 0 0 -31px;background:#ffb34722}
+body.cur,body.cur a,body.cur button{cursor:none}
+body.cur #dot,body.cur #ring{display:block}
+ .logo{ width: auto; height: 80px;object-fit: contain; padding: auto;  flex-shrink: 0;  margin-right: 8px; }
+nav{display: flex; align-items: center; justify-content: space-between; min-height: 100px;}
+.brand{ display: flex; align-items: center; gap: 10px;}
+.hero .wrap{ display: block; position: relative; }
+.hero-content{ width: calc(100%-360px) ; min-width: 0; }
+ .hero-photo{ position: absolute; right: -300px; top: 30%; transform: translateY(-50%);
+     
+   width: 320px; height: 320px; justify-self: end ; border-radius: 50%; overflow: hidden; border: 4px soild #35e0b5; box-shadow:  0 0 35px rgba(53 , 224 , 181 ,0.35);}
+ .hero-photo img{ width: 100% ; height: 100%; object-fit: cover; display: block; }
+ #hero .hero-photo { width: 320px; height: 320px; border-radius: 50%;  overflow: hidden; justify-self: end; flex-shrink: 0;}
+#hero .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;}
+@media(max-width: 768px){ .hero .wrap { display: flex ; flex-direction: column;} .hero-content{ width: 100%;} .hero-photo{ position: relative; top: auto; right: auto; transform: none;    width: 250px; height: 250px; margin: 30px auto; }}
+ @media(max-width: 768px){ .hero .wrap { flex-direction: column; align-items: flex-start;} .hero-photo{ width: 220px; height: 220px ; align-self: center;}}
+@keyframes glow { 0%, 100%{ filter:drop-shadow(0 0 18px #4f6bff) brigthness(1.1);} 50%{filter: feDropShadow(0 0 18px#a855f7) brigthness(1.4);} }
+@keyframes intro{ 0% { transform: rotate(-720deg) scale(0); opacity:0; } 60%{transform: rotate(20deg) scale(1.3); opacity: 1;} }
+@media(max-width:760px){nav a:not(.keep){display:none}section{padding:80px 0}.facts{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+
+</style>
+</head>
+<body>
+<a class="skip" href="#projects">Skip to projects</a>
+<div id="bar" aria-hidden="true"></div><div id="dot"></div><div id="ring"></div>
+<div id="cricle"></div>
+<header><div class="wrap">
+
+ <a class="brand" href="#top">
+    <img src="image/logo1.png" class="logo" alt="logo">Deepak<span>.</span></a>
+ <nav aria-label="Main"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a class="keep" href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+   <!-- image section-->
+ <div class="hero" id="hero"><div class="wrap">
+ 
+   <div class="hero-photo">
+      <img src="image/deepak.jpeg" alt="deepak kumar">
+   </div>
+  <div class="kicker">BCA Student · Ludhiana, Punjab</div>
+  <div class="name" id="name" aria-label="Deepak Kumar"></div>
+  <h1>Aspiring web developer and cyber security enthusiast.</h1>
+  <p>I'm learning to build useful, user-friendly web applications, one project at a time.</p>
+  <div class="btns"><a class="btn" href="#projects">View My Projects</a><a class="btn ghost" href="#contact">Contact Me</a></div>
+ </div></div>
+
+ <section id="about"><div class="wrap rv">
+  <h2>About me</h2>
+  <p class="lead">I am a first-year Bachelor of Computer Applications (BCA) student at PCTE Group of Institutes. I am interested in web development, programming and cyber security, and I'm building my technical skills through learning and practical projects.</p>
+  <div class="facts">
+   <div class="fact"><b>BCA</b><span>PCTE Group of Institutes, first year</span></div>
+   <div class="fact"><b>Focus</b><span>Web development &amp; cyber security</span></div>
+   <div class="fact"><b>Ludhiana</b><span>Punjab, India</span></div>
+  </div>
+ </div></section>
+
+ <section id="skills"><div class="wrap rv">
+  <h2>Technical skills</h2>
+  <p class="lead">Languages I'm learning and using.</p>
+  <div class="chips"><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+ </div></section>
+
+ <section id="projects"><div class="wrap">
+  <h2 class="rv">Projects</h2>
+  <p class="lead rv">One project is in progress. The others are planned and not yet built.</p>
+  <div class="cards">
+   <article class="card rv">
+    <span class="badge now">In progress</span>
+    <h3>Website Calculator</h3>
+    <p>A calculator website with a simple interface for performing calculations.</p>
+    <p>Next improvements:</p>
+    <ul><li>Responsive, mobile-friendly design</li><li>Calculation history</li><li>More mathematical operations</li><li>Improved user interface</li></ul>
+   </article>
+  </div>
+  <h3 class="sub rv">Planned projects</h3>
+  <div class="cards">
+   <article class="card plan rv"><span class="badge plan">Planned</span><h3>Personal Portfolio</h3><p>A personal website to showcase my profile, skills, projects and contact information.</p></article>
+   <article class="card plan rv"><span class="badge plan">Planned</span><h3>To-Do List App</h3><p>A task manager for adding, completing and deleting tasks.</p></article>
+   <article class="card plan rv"><span class="badge plan">Planned</span><h3>Weather App</h3><p>Shows weather information for a selected city using a weather API.</p></article>
+   <article class="card plan rv"><span class="badge plan">Planned</span><h3>Password Strength Checker</h3><p>Evaluates password strength and gives security feedback.</p></article>
+   <article class="card plan rv"><span class="badge plan">Planned</span><h3>Student Expense Tracker</h3><p>Records expenses and shows spending summaries.</p></article>
+
+
+    
+  </div>
+ </div></section>
+  </div>
+ </div></section>
+
+ <section id="services"><div class="wrap rv">
+  <h2>Services I aim to offer</h2>
+  <p class="lead">As I gain experience, I want to help with:</p>
+  <div class="chips"><span class="chip">Website design</span><span class="chip">Business websites</span><span class="chip">Calculator &amp; utility tools</span></div>
+  <p class="lead" style="margin-top:36px"><b style="color:var(--ink)">Career objective:</b> To improve my programming and web development skills, gain practical experience through projects, and keep learning about web development and cyber security.</p>
+ </div></section>
+
+ <section id="contact"><div class="wrap rv">
+  <h2>Contact</h2>
+  <p class="lead">Want to connect or give feedback? Reach me here.</p>
+  <div class="contact">
+   <a class="btn" href="mailto:deepak814562@gmail.com">deepak814562@gmail.com</a>
+   <a class="btn ghost" href="https://github.com/deepakkumar-div" target="_blank" rel="noopener">GitHub</a>
+   <a class="btn ghost" href="https://www.linkedin.com/in/deepak-kumar-631372411" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+ </div></section>
+</main>
+
+<footer>© <span id="yr"></span> Deepak Kumar · Ludhiana, Punjab, India</footer>
+
+<script>
+var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* Name letters (magnet + glow near the mouse) */
+var nameBox = document.getElementById("name");
+"DEEPAK KUMAR".split("").forEach(function(ch){
+ var s = document.createElement("span");
+ s.textContent = ch === " " ? "" : ch; s.setAttribute("aria-hidden","true");
+ if (ch === " ") s.className = "sp";
+ nameBox.appendChild(s);
+});
+var letters = nameBox.querySelectorAll("span"), hero = document.getElementById("hero");
+function resetL(){ letters.forEach(function(l){ l.style.transform = l.style.color = l.style.textShadow = ""; }); }
+if (!reduce) {
+ var busy = false;
+ hero.addEventListener("mousemove", function(e){
+  if (busy) return; busy = true;                                                                                          
+  requestAnimationFrame(function(){
+   busy = false;
+   letters.forEach(function(l){
+    var r = l.getBoundingClientRect(), dx = e.clientX - (r.left + r.width/2), dy = e.clientY - (r.top + r.height/2);
+    var d = Math.sqrt(dx*dx + dy*dy), R = 200;
+    if (d < R) { var k = 1 - d/R; l.style.transform = "translate(" + dx*k*.25 + "px," + dy*k*.25 + "px)"; l.style.color = "#ffb347"; l.style.textShadow = "0 0 " + 28*k + "px #ffb347"; }
+    else { l.style.transform = l.style.color = l.style.textShadow = ""; }
+   });
+  });
+ });
+ hero.addEventListener("mouseleave", resetL);
+}
+
+/* Scroll progress line */
+var bar = document.getElementById("bar");
+addEventListener("scroll", function(){
+ var h = document.documentElement.scrollHeight - innerHeight;
+ bar.style.width = (h > 0 ? scrollY/h*100 : 0) + "%";
+}, {passive:true});
+
+/* Fade + slide in */
+var io = new IntersectionObserver(function(es){
+ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+
+/* 3D tilt on cards */
+if (!reduce) document.querySelectorAll(".card").forEach(function(c){
+ c.addEventListener("mousemove", function(e){
+  var r = c.getBoundingClientRect(), x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5;
+  c.style.transform = "rotateY(" + x*10 + "deg) rotateX(" + -y*10 + "deg) translateZ(6px)";
+ });
+ c.addEventListener("mouseleave", function(){ c.style.transform = ""; });
+});
+
+/* Custom cursor (mouse only) */
+if (matchMedia("(pointer: fine)").matches && !reduce) {
+ document.body.classList.add("cur");
+ var dot = document.getElementById("dot"), ring = document.getElementById("ring"), px = 0, py = 0, rx = 0, ry = 0;
+ addEventListener("mousemove", function(e){ px = e.clientX; py = e.clientY; dot.style.transform = "translate(" + px + "px," + py + "px)"; });
+ (function loop(){ rx += (px - rx)*.18; ry += (py - ry)*.18; ring.style.transform = "translate(" + rx + "px," + ry + "px)"; requestAnimationFrame(loop); })();
+ document.querySelectorAll("a,button").forEach(function(el){
+  el.addEventListener("mouseenter", function(){ ring.classList.add("big"); });
+  el.addEventListener("mouseleave", function(){ ring.classList.remove("big"); });
+ });
+}
+</script>
+</body>
+</html>
